@@ -27,11 +27,11 @@ class GestorEquipos {
 	// Metodo agregarEquipo---------------
 	public void agregarEquipo(LinkedList<Equipo> listaEquipos) {
 	    // Verificar si ya hay dos equipos en la lista
-	    if (listaEquipos.size() >= 2) {
+	   if (listaEquipos.size() >= 2) {
 	        JOptionPane.showMessageDialog(null, "No pueden existir más de dos equipos.");
 	        return;
 	    }
-	    String nombreEquipo;
+	     /*String nombreEquipo;
 	    boolean flag = false;
 	    do {
 	        nombreEquipo = JOptionPane.showInputDialog("Ingrese el nombre del equipo");
@@ -54,7 +54,13 @@ class GestorEquipos {
 	        } else if (nombreEquipo.isEmpty()) {
 	            JOptionPane.showMessageDialog(null, "Por favor ingrese un nombre de equipo.");
 	        }
-	    } while (!flag);
+	    } while (!flag);*/
+	   else {
+		Equipo skt = new Equipo("skt", new LinkedList<>());
+		Equipo fan = new Equipo("fnatic", new LinkedList<>());
+        listaEquipos.add(skt);
+        listaEquipos.add(fan);
+	}
 	}
 
 
