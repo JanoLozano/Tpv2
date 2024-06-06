@@ -55,13 +55,13 @@ class GestorEquipos {
 	            JOptionPane.showMessageDialog(null, "Por favor ingrese un nombre de equipo.");
 	        }
 	    } while (!flag);*/
-	   else {
+	   	
 		Equipo skt = new Equipo("skt", new LinkedList<>());
 		Equipo fan = new Equipo("fnatic", new LinkedList<>());
         listaEquipos.add(skt);
         listaEquipos.add(fan);
-	}
-	}
+	
+}
 
 
 

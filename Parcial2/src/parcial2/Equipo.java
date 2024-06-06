@@ -24,7 +24,7 @@ class Equipo {
     // Metodo agregarJugador---------------
     public void agregarJugador(LinkedList<Equipo> listaEquipos, LinkedList<Jugador> listaJugadores) {
         // Verificar si hay equipos existentes
-        if (listaEquipos.isEmpty()) {
+        /*if (listaEquipos.isEmpty()) {
             JOptionPane.showMessageDialog(null, "No hay equipos existentes. Debe agregar al menos un equipo antes "
             		+ "de agregar jugadores.");
             return;
@@ -130,7 +130,18 @@ class Equipo {
             JOptionPane.showMessageDialog(null, "Jugador agregado con éxito al equipo " + nombreEquipoSeleccionado);
         } else {
             JOptionPane.showMessageDialog(null, "El equipo seleccionado no fue encontrado.");
-        }
+        }*/
+    	
+    	String nombreJugadro1 = "faker";
+    	int edadJugador1 = 24;
+    	String lineaJugadro1 = "mid";
+        Equipo skt = listaEquipos.get(0);
+    	Equipo fan = listaEquipos.get(1);
+    	// Crear el jugador y agregarlo al equipo seleccionado
+        Jugador jugador = new Jugador(nombreJugadro1, edadJugador1, lineaJugadro1, skt);
+        skt.getListaJugadores().add(jugador);  // Agregar jugador al equipo
+        listaJugadores.add(jugador);  // Agregar jugador a la lista global de jugadores
+        JOptionPane.showMessageDialog(null, "Jugador agregado con éxito al equipo " + skt);
     }
 
     
