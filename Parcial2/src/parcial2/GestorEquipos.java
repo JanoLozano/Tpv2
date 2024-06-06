@@ -170,4 +170,58 @@ class GestorEquipos {
          }
          JOptionPane.showMessageDialog(null, "Lista de equipos:\n" + mensajeEquipos );
     }
+ // Metodo jugarPartida
+    public void jugarPartida(LinkedList<Equipo> listaEquipos,LinkedList<Jugador> listaJugadores ) {
+    	// Verificar que existan equipos
+    	if (listaEquipos.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "No hay equipos en la lista");
+            return;
+        }
+    	// Verificar que no sean menos de dos equipos
+    	if (listaEquipos.size() < 2) {
+            JOptionPane.showMessageDialog(null, "Debe haber al menos dos equipos para jugar una partida.");
+            return;
+        }
+    	// Verificar que hayan jugadores en la lista de los equipos
+    	if (listaJugadores.isEmpty()) {
+    		JOptionPane.showMessageDialog(null, "No hay jugadores en la lista de los equipos");
+            return;
+		}
+    	// Verificar que hayan 5 jugadores en cada equipo
+    	if (listaJugadores.size() < 10) { // Si el tamaño de la lista es menor a 10 significa que no hay 5 jugadores en cada equipo ya que no se pueden agregar mas de 5 por equipo
+    		JOptionPane.showMessageDialog(null, "deben haber 5 jugadores en cada equipo");
+            return;
+		}
+    	// Creacion variable Equipo que contiene la lista de los equipos segun parametro
+    	Equipo equipo1 = listaEquipos.get(0);
+    	Equipo equipo2 = listaEquipos.get(1);
+    	
+    	int contVictoriasEquipo1 = 0;
+    	int contVictoriasEquipo2 = 0;
+    	
+    	// Bucle que continua siempre que las victorias sean menor a 3
+    	while (contVictoriasEquipo1 < 3 && contVictoriasEquipo2 < 3) {
+    		int resultado = (int) (Math.random() * 2); // 0 o 1
+			
+    		 if (resultado == 0) {
+    			 contVictoriasEquipo1++;
+             } else {
+            	 contVictoriasEquipo2++;
+             }
+    		 
+    		 String mensajeResultado = "Resultado de la partida:\n" +
+    				 equipo1.getNombreEquipo() + ": " + contVictoriasEquipo1 + " victorias\n" +
+    				 equipo2.getNombreEquipo() + ": " + contVictoriasEquipo2 + " victorias";
+    		 
+    		 JOptionPane.showMessageDialog(null, mensajeResultado);	
+		}
+    	
+    	String mensajeGanador;
+        if (contVictoriasEquipo1 == 3) {
+            mensajeGanador = "El ganador es " + equipo1.getNombreEquipo() + " con 3 victorias.";
+        } else {
+            mensajeGanador = "El ganador es " + equipo2.getNombreEquipo() + " con 3 victorias.";
+        }
+        JOptionPane.showMessageDialog(null, mensajeGanador);
+    }
 }

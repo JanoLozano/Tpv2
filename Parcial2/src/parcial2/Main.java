@@ -77,7 +77,7 @@ public class Main {
                     gestor.mostrarListaDeEquipos();
                     break;
                 case 10:
-                	equipo.jugarPartida(listaEquipos, listaJugadores);
+                	gestor.jugarPartida(listaEquipos, listaJugadores);
                     break;
                 case 11:
                     JOptionPane.showMessageDialog(null, "¡Hasta luego!");
