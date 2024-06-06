@@ -131,17 +131,49 @@ class Equipo {
         } else {
             JOptionPane.showMessageDialog(null, "El equipo seleccionado no fue encontrado.");
         }*/
-    	
+    	// Creacion primer jugador
     	String nombreJugadro1 = "faker";
     	int edadJugador1 = 24;
     	String lineaJugadro1 = "mid";
         Equipo skt = listaEquipos.get(0);
     	Equipo fan = listaEquipos.get(1);
     	// Crear el jugador y agregarlo al equipo seleccionado
-        Jugador jugador = new Jugador(nombreJugadro1, edadJugador1, lineaJugadro1, skt);
-        skt.getListaJugadores().add(jugador);  // Agregar jugador al equipo
-        listaJugadores.add(jugador);  // Agregar jugador a la lista global de jugadores
-        JOptionPane.showMessageDialog(null, "Jugador agregado con éxito al equipo " + skt);
+        Jugador faker = new Jugador(nombreJugadro1, edadJugador1, lineaJugadro1, skt);
+        skt.getListaJugadores().add(faker);  // Agregar jugador al equipo
+        listaJugadores.add(faker);  // Agregar jugador a la lista global de jugadores
+        // Creacion segundo jugador
+        String nombreJugadro2 = "Zeus";
+    	int edadJugador2 = 24;
+    	String lineaJugadro2 = "top";
+    	// Crear el jugador y agregarlo al equipo seleccionado
+        Jugador zeus = new Jugador(nombreJugadro2, edadJugador2, lineaJugadro2, skt);
+        skt.getListaJugadores().add(zeus);  // Agregar jugador al equipo
+        listaJugadores.add(zeus);  // Agregar jugador a la lista global de jugadores
+        // Creacion tercer jugador
+        String nombreJugadro3 = "Oner";
+    	int edadJugador3 = 24;
+    	String lineaJugadro3 = "top";
+    	// Crear el jugador y agregarlo al equipo seleccionado
+        Jugador Oner = new Jugador(nombreJugadro3, edadJugador3, lineaJugadro3, skt);
+        skt.getListaJugadores().add(Oner);  // Agregar jugador al equipo
+        listaJugadores.add(Oner);  // Agregar jugador a la lista global de jugadores
+        // Creacion cuarto jugador
+        String nombreJugadro4 = "Gumayusi";
+    	int edadJugador4 = 24;
+    	String lineaJugadro4 = "adc";
+    	// Crear el jugador y agregarlo al equipo seleccionado
+        Jugador Gumayusi = new Jugador(nombreJugadro4, edadJugador4, lineaJugadro4, skt);
+        skt.getListaJugadores().add(Gumayusi);  // Agregar jugador al equipo
+        listaJugadores.add(Gumayusi);  // Agregar jugador a la lista global de jugadores
+        // Creacion quinto jugador
+        String nombreJugadro5 = "Keria";
+    	int edadJugador5 = 24;
+    	String lineaJugadro5 = "supp";
+    	// Crear el jugador y agregarlo al equipo seleccionado
+        Jugador Keria = new Jugador(nombreJugadro5, edadJugador5, lineaJugadro5, skt);
+        skt.getListaJugadores().add(Keria);  // Agregar jugador al equipo
+        listaJugadores.add(Keria);  // Agregar jugador a la lista global de jugadores
+    
     }
 
     

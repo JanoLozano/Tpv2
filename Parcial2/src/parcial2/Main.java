@@ -16,6 +16,8 @@ public class Main {
         
         // Creacion objeto gestor
         GestorEquipos gestor = new GestorEquipos(listaEquipos);
+        gestor.agregarEquipo(listaEquipos);
+        equipo.agregarJugador(listaEquipos, listaJugadores);
         // Menú de opciones
         String[] opciones = {
             "Agregar jugador",
